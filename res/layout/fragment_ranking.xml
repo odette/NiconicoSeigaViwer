@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<!-- コンテンツ領域 -->
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+	
+			<ProgressBar
+				android:id="@android:id/progress"
+				style="?android:attr/progressBarStyleLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" >
+			<!-- アイテムが空の場合に使用するテキスト -->
+			<TextView
+				android:id="@id/android:empty"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="@android:color/black"/>
+			<!-- イベント一覧 -->
+			<ListView
+				android:id="@id/android:list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:listSelector="@drawable/ranking_selector"
+				android:focusableInTouchMode="false"
+				android:focusable="false"
+				android:background="@color/abs__background_holo_light"/>
+		</FrameLayout>
+	
+	</FrameLayout>
+</LinearLayout>

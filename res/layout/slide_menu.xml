@@ -1,0 +1,100 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/menu_width"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/menu_padding_top" >
+
+        <TextView
+            android:id="@+id/category_all"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_all"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_creation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_creation"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_orignal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_orignal"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_portrait"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_portrait"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_fanart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_fanart"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_anime"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_anime"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_game"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_game"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_character"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_character"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_popular"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_popular"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_vocaloid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_vocaloid"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_category_r15"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/category_r15"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/menu_text_size" />
+    </LinearLayout>
+
+</ScrollView>
