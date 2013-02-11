@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 /**
+ * 大きいサイズの画像を表示する。
+ * 
  * @author y_sugasawa
  * @since 2013/02/01
  */
@@ -21,6 +23,9 @@ public class DispActivity extends SherlockFragmentActivity {
 	public static final String ARGS_IMG_TITLE = "imgTitle";
 	public static final String ARGS_IMG_ID = "imgId";
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,9 +38,13 @@ public class DispActivity extends SherlockFragmentActivity {
 		((TextView) findViewById(R.id.title)).setText(intent.getStringExtra(ARGS_IMG_TITLE));
 		final WebImageView view = (WebImageView) findViewById(R.id.large_image);
 		view.setUrl(ImageUtil.getLargeImg(intent.getStringExtra(ARGS_IMG_ID)));
+		view.setScalable(true);
 		view.draw();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean onKeyDown(final int keyCode, final KeyEvent event) {
 		if (keyCode != KeyEvent.KEYCODE_BACK) {

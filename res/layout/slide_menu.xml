@@ -1,100 +1,187 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/menu_width"
-    android:layout_height="fill_parent" >
+	android:layout_width="@dimen/menu_width"
+	android:layout_height="fill_parent" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/menu_padding_top" >
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="@dimen/side_menu_padding_top" >
 
-        <TextView
-            android:id="@+id/category_all"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_all"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category"
+			android:textColor="@color/menu_text_color"
+			android:textSize="@dimen/menu_text_size" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="3dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_creation"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_creation"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_all"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_all_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_orignal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_orignal"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_creation"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_creation_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_portrait"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_portrait"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_orignal"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_orignal_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_fanart"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_fanart"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_portrait"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_portrait_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_anime"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_anime"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_fanart"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_fanart_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_game"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_game"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_anime"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_anime_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_character"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_character"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_game"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_game_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_popular"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_popular"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_character"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_character_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_vocaloid"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_vocaloid"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
+		<TextView
+			android:id="@+id/menu_category_popular"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_popular_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/menu_category_r15"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/category_r15"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/menu_text_size" />
-    </LinearLayout>
+		<TextView
+			android:id="@+id/menu_category_toho"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_toho_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
+
+		<TextView
+			android:id="@+id/menu_category_vocaloid"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_vocaloid_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray" />
+
+		<TextView
+			android:id="@+id/menu_category_r15"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/category_r15_disp"
+			android:textColor="@color/menu_text_color"
+			android:paddingLeft="@dimen/side_menu_padding_left"
+			android:textSize="@dimen/side_menu_category_text_size"
+			android:background="@drawable/ranking_selector" />
+	</LinearLayout>
 
 </ScrollView>

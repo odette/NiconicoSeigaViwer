@@ -14,11 +14,14 @@ import org.xmlpull.v1.XmlPullParserException;
 import android.util.Xml;
 
 /**
+ * ニコニコ静画APIのParserクラス。
+ * 
  * @author y_sugasawa
  * @since 2013/01/30
  */
 public class RankingParser implements Parser<List<SeigaInfoDto>> {
 
+	/** タグ。 */
 	private static final String TAG = RankingParser.class.getSimpleName();
 
 	private static final String TAG_IMAGE = "image";

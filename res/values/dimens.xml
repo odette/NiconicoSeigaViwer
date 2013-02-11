@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- メニュー -->
-    <!-- width -->
-    <dimen name="menu_width">250dp</dimen>
-    <!-- padding_top -->
-    <dimen name="menu_padding_top">25dp</dimen>
-    <!-- 文字サイズ -->
-    <dimen name="menu_text_size">20sp</dimen>
-    <dimen name="font_size">16sp</dimen>
+	<!-- メニュー -->
+	<!-- width -->
+	<dimen name="menu_width">250dp</dimen>
+	<!-- 文字サイズ -->
+	<dimen name="menu_text_size">20sp</dimen>
+	<dimen name="font_size">16sp</dimen>
+	
+	<!-- サイドメニュー -->
+	<dimen name="side_menu_padding_top">20dp</dimen>
+	<dimen name="side_menu_padding_left">20dp</dimen>
+	<dimen name="side_menu_category_text_size">25sp</dimen>
 
 </resources>

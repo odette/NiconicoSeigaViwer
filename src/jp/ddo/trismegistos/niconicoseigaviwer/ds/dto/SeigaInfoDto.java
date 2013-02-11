@@ -4,6 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
+ * ニコニコ静画情報を格納するDtoクラス。
+ * 
  * @author y_sugasawa
  * @since 2013/01/29
  */
@@ -21,9 +23,17 @@ public class SeigaInfoDto implements Parcelable {
 	/** 作者名 */
 	public String nickname;
 
+	/**
+	 * デフォルトコンストラクタ。
+	 */
 	public SeigaInfoDto() {
 	}
 
+	/**
+	 * コンストラクタ。
+	 * 
+	 * @param in
+	 */
 	public SeigaInfoDto(final Parcel in) {
 		rank = in.readString();
 		id = in.readString();

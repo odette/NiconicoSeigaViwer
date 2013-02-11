@@ -16,21 +16,35 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 /**
+ * ランキングを表示するためのAdapterクラス。
+ * 
  * @author y_sugasawa
  * @since 2013/01/29
  */
 public class RankingAdapter extends ArrayAdapter<SeigaInfoDto> {
 
+	/** コンテキスト。 */
 	private Context context;
 
+	/** inflater。 */
 	private LayoutInflater inflater;
 
+	/** 1行のリソースID。 */
 	private int resourceId;
 
+	/** 表示するItem。 */
 	private List<SeigaInfoDto> items;
 
+	/** イメージキャッシュ。 */
 	private ImageCache imageCache;
 
+	/**
+	 * コンストラクタ。
+	 * 
+	 * @param context コンテキスト
+	 * @param resourceId 1行のリソースID
+	 * @param items 表示するItem
+	 */
 	public RankingAdapter(final Context context, final int resourceId,
 			final List<SeigaInfoDto> items) {
 		super(context, resourceId, items);
@@ -46,6 +60,9 @@ public class RankingAdapter extends ArrayAdapter<SeigaInfoDto> {
 		imageCache = new ImageCache(ImageUtil.getCacheDir(context), 1024 * 1024 * memClass / 8);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public View getView(final int position, View convertView, final ViewGroup parent) {
 
@@ -80,6 +97,11 @@ public class RankingAdapter extends ArrayAdapter<SeigaInfoDto> {
 		public WebImageView image;
 	}
 
+	/**
+	 * itemを入れ替える。
+	 * 
+	 * @param items 表示するItem
+	 */
 	public void setItems(final List<SeigaInfoDto> items) {
 		this.items.clear();
 		this.items.addAll(items);

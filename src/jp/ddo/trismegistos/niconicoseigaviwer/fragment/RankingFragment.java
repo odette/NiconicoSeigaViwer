@@ -37,8 +37,13 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
 	private static final int INTERNAL_PROGRESS_CONTAINER_ID = 0x00ff0002;
 	private static final int INTERNAL_LIST_CONTAINER_ID = 0x00ff0003;
 
+	public static final String ARGS_CATEGORY = "category";
+
 	private RankingAdapter adapter;
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
 			final Bundle savedInstanceState) {
@@ -70,6 +75,9 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
 		return view;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onActivityCreated(final Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
@@ -81,9 +89,12 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
 		// リストを隠してProgressBarを出す
 		setListShown(false);
 		// ローダーを準備
-		getLoaderManager().initLoader(0, null, this);
+		getLoaderManager().initLoader(0, getArguments(), this);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onListItemClick(final ListView l, final View v, final int position, final long id) {
 		final SeigaInfoDto dto = adapter.getItem(position);
@@ -99,7 +110,7 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
 	 */
 	@Override
 	public Loader<List<SeigaInfoDto>> onCreateLoader(final int id, final Bundle ars) {
-		return new RankingLoader(getActivity());
+		return new RankingLoader(getActivity(), ars.getString(ARGS_CATEGORY));
 	}
 
 	/**

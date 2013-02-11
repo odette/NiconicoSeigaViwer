@@ -1,6 +1,8 @@
 package jp.ddo.trismegistos.niconicoseigaviwer.constant;
 
 /**
+ * ニコニコ静画のURL。
+ * 
  * @author y_sugasawa
  * @since 2013/01/29
  */
