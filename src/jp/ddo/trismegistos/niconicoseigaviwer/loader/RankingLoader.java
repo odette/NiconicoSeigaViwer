@@ -1,3 +1,4 @@
+
 package jp.ddo.trismegistos.niconicoseigaviwer.loader;
 
 import java.util.List;
@@ -17,36 +18,44 @@ import android.content.Context;
  */
 public class RankingLoader extends AbstractAsyncTaskLoader<List<SeigaInfoDto>> {
 
-	/** カテゴリー。 */
-	private String category;
+    /** カテゴリー。 */
+    private String category;
+    /** 取得期間。 */
+    private String time;
 
-	/**
-	 * コンストラクタ。
-	 * 
-	 * @param context コンテキスト
-	 * @param category カテゴリー
-	 */
-	public RankingLoader(final Context context, final String category) {
-		super(context);
-		this.category = category;
-	}
+    /**
+     * コンストラクタ。
+     * 
+     * @param context コンテキスト
+     * @param category カテゴリー
+     * @param time 取得期間
+     */
+    public RankingLoader(final Context context, final String category, final String time) {
+        super(context);
+        this.category = category;
+        this.time = time;
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected List<SeigaInfoDto> load() {
-		final StringBuilder sb = new StringBuilder(WebUrls.RANKING);
-		sb.append("fresh");
-		sb.append("%2c");
-		sb.append(category);
-		final Api<List<SeigaInfoDto>> api = new Api<List<SeigaInfoDto>>(sb.toString(),
-				new RankingParser());
-		try {
-			return api.get();
-		} catch (Exception e) {
-		}
-		return null;
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected List<SeigaInfoDto> load() {
+        final StringBuilder sb = new StringBuilder(WebUrls.RANKING);
+        if (time == null) {
+            sb.append("fresh");
+        } else {
+            sb.append(time);
+        }
+        sb.append("%2c");
+        sb.append(category);
+        final Api<List<SeigaInfoDto>> api = new Api<List<SeigaInfoDto>>(sb.toString(),
+                new RankingParser());
+        try {
+            return api.get();
+        } catch (Exception e) {
+        }
+        return null;
+    }
 
 }

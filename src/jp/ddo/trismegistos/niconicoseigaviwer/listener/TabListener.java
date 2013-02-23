@@ -1,3 +1,4 @@
+
 package jp.ddo.trismegistos.niconicoseigaviwer.listener;
 
 import jp.ddo.trismegistos.niconicoseigaviwer.R;
@@ -18,59 +19,59 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
  */
 public class TabListener<T extends Fragment> implements ActionBar.TabListener {
 
-	private Fragment fragment;
-	private SherlockFragmentActivity activity;
-	private String tag;
-	private final Class<T> clz;
+    private Fragment fragment;
+    private SherlockFragmentActivity activity;
+    private String tag;
+    private final Class<T> clz;
 
-	/**
-	 * コンストラクタ。
-	 * 
-	 * @param activity
-	 * @param tag
-	 * @param clz
-	 */
-	public TabListener(final SherlockFragmentActivity activity, final String tag, final Class<T> clz) {
-		this.activity = activity;
-		this.tag = tag;
-		this.clz = clz;
+    /**
+     * コンストラクタ。
+     * 
+     * @param activity
+     * @param tag
+     * @param clz
+     */
+    public TabListener(final SherlockFragmentActivity activity, final String tag, final Class<T> clz) {
+        this.activity = activity;
+        this.tag = tag;
+        this.clz = clz;
 
-		this.fragment = activity.getSupportFragmentManager().findFragmentByTag(tag);
-	}
+        this.fragment = activity.getSupportFragmentManager().findFragmentByTag(tag);
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public void onTabSelected(final Tab tab, final FragmentTransaction ft) {
-		if (fragment == null) {
-			fragment = Fragment.instantiate(activity, clz.getName());
-			final FragmentManager fm = activity.getSupportFragmentManager();
-			fm.beginTransaction().add(R.id.container, fragment, tag).commit();
-		} else if (fragment.isDetached()) {
-			final FragmentManager fm = activity.getSupportFragmentManager();
-			fm.beginTransaction().attach(fragment).commit();
-		}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onTabSelected(final Tab tab, final FragmentTransaction ft) {
+        if (fragment == null) {
+            fragment = Fragment.instantiate(activity, clz.getName());
+            final FragmentManager fm = activity.getSupportFragmentManager();
+            fm.beginTransaction().add(R.id.container, fragment, tag).commit();
+        } else if (fragment.isDetached()) {
+            final FragmentManager fm = activity.getSupportFragmentManager();
+            fm.beginTransaction().attach(fragment).commit();
+        }
 
-	}
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public void onTabUnselected(final Tab tab, final FragmentTransaction ft) {
-		if (fragment != null) {
-			Log.e("onTabUnselected", fragment.getClass().getSimpleName());
-			final FragmentManager fm = activity.getSupportFragmentManager();
-			fm.beginTransaction().detach(fragment).commit();
-		}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onTabUnselected(final Tab tab, final FragmentTransaction ft) {
+        if (fragment != null) {
+            Log.e("onTabUnselected", fragment.getClass().getSimpleName());
+            final FragmentManager fm = activity.getSupportFragmentManager();
+            fm.beginTransaction().detach(fragment).commit();
+        }
 
-	}
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public void onTabReselected(Tab tab, FragmentTransaction ft) {
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onTabReselected(Tab tab, FragmentTransaction ft) {
+    }
 }

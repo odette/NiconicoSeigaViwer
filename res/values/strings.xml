@@ -1,37 +1,55 @@
 <resources>
 
-	<!-- アプリ名 -->
-	<string name="app_name">ニコニコ静画Viwer</string>
+    <!-- アプリ名 -->
+    <string name="app_name">ニコニコ静画Viwer</string>
 
-	<!-- ランキング -->
-	<!-- 投稿者 -->
-	<string name="nickname_pos">投稿者: </string>
+    <!-- ランキング -->
+    <!-- 投稿者 -->
+    <string name="nickname_pos">投稿者: </string>
 
-	<!-- カテゴリ -->
-	<string name="category">カテゴリ</string>
-	<string name="category_all_disp">総合</string>
-	<string name="category_all">all</string>
-	<string name="category_creation_disp">創作</string>
-	<string name="category_creation">g_creation</string>
-	<string name="category_orignal_disp">オリジナル</string>
-	<string name="category_orignal">original</string>
-	<string name="category_portrait_disp">似顔絵</string>
-	<string name="category_portrait">portrait</string>
-	<string name="category_fanart_disp">ファンアート</string>
-	<string name="category_fanart">g_fanart</string>
-	<string name="category_anime_disp">アニメ</string>
-	<string name="category_anime">anime</string>
-	<string name="category_game_disp">ゲーム</string>
-	<string name="category_game">game</string>
-	<string name="category_character_disp">キャラクター</string>
-	<string name="category_character">character</string>
-	<string name="category_popular_disp">殿堂入り</string>
-	<string name="category_popular">g_popular</string>
-	<string name="category_toho_disp">東方</string>
-	<string name="category_toho">toho</string>
-	<string name="category_vocaloid_disp">VOCALOID</string>
-	<string name="category_vocaloid">vocaloid</string>
-	<string name="category_r15_disp">R-15</string>
-	<string name="category_r15">r15</string>
+    <!-- カテゴリ -->
+    <string name="category">カテゴリ</string>
+    <string name="category_all_disp">総合</string>
+    <string name="category_all">all</string>
+    <string name="category_creation_disp">創作</string>
+    <string name="category_creation">g_creation</string>
+    <string name="category_orignal_disp">オリジナル</string>
+    <string name="category_orignal">original</string>
+    <string name="category_portrait_disp">似顔絵</string>
+    <string name="category_portrait">portrait</string>
+    <string name="category_fanart_disp">ファンアート</string>
+    <string name="category_fanart">g_fanart</string>
+    <string name="category_anime_disp">アニメ</string>
+    <string name="category_anime">anime</string>
+    <string name="category_game_disp">ゲーム</string>
+    <string name="category_game">game</string>
+    <string name="category_character_disp">キャラクター</string>
+    <string name="category_character">character</string>
+    <string name="category_popular_disp">殿堂入り</string>
+    <string name="category_popular">g_popular</string>
+    <string name="category_toho_disp">東方</string>
+    <string name="category_toho">toho</string>
+    <string name="category_vocaloid_disp">VOCALOID</string>
+    <string name="category_vocaloid">vocaloid</string>
+    <string name="category_r15_disp">R-15</string>
+    <string name="category_r15">r15</string>
+    <string name="time_new">fresh</string>
+    <string name="time_new_disp">新着</string>
+    <string name="time_hour">hourly</string>
+    <string name="time_hour_disp">毎時</string>
+    <string name="time_day">daily</string>
+    <string name="time_day_disp">デイリー</string>
+    <string name="time_week">weekly</string>
+    <string name="time_week_disp">週間</string>
+    <string name="time_month">monthly</string>
+    <string name="time_month_disp">月間</string>
+    <string name="time_total">total</string>
+    <string name="time_total_disp">合計</string>
+
+    <!-- 大きい画像表示時のリストメニュー -->
+    <string-array name="image_menus">
+        <item>画像を保存する</item>
+        <item>詳細ページをブラウザで開く</item>
+    </string-array>
 
 </resources>

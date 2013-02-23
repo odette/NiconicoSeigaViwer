@@ -1,3 +1,4 @@
+
 package jp.ddo.trismegistos.niconicoseigaviwer.constant;
 
 /**
@@ -8,9 +9,12 @@ package jp.ddo.trismegistos.niconicoseigaviwer.constant;
  */
 public class WebUrls {
 
-	/** ランキングのURL */
-	public static final String RANKING = "http://ext.seiga.nicovideo.jp/api/illust/blogparts?mode=ranking&key=";
+    /** 公式URL */
+    public static final String OFFICAL_URL = "http://seiga.nicovideo.jp/seiga/im";
 
-	/** サムネイル取得 */
-	public static final String THUMBNAIL = "http://lohas.nicoseiga.jp/img/";
+    /** ランキングのURL */
+    public static final String RANKING = "http://ext.seiga.nicovideo.jp/api/illust/blogparts?mode=ranking&key=";
+
+    /** サムネイル取得 */
+    public static final String THUMBNAIL = "http://lohas.nicoseiga.jp/img/";
 }

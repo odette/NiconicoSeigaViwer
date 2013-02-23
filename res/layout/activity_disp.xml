@@ -4,7 +4,7 @@
 	android:layout_height="fill_parent"
 	android:background="@color/abs__background_holo_dark">
 
-		<jp.ddo.trismegistos.androidutil.ui.WebImageView
+		<jp.ddo.trismegistos.androidutil.view.WebImageView
 			android:id="@+id/large_image"
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent"

@@ -1,3 +1,4 @@
+
 package jp.ddo.trismegistos.niconicoseigaviwer.activity;
 
 import jp.ddo.trismegistos.androidutil.file.FileUtil;
@@ -17,28 +18,28 @@ import android.view.Window;
  */
 public class SplashActivity extends Activity {
 
-	/** スプラッシュ表示時間 */
-	private static final int DELAY_TIME = 2000;
+    /** スプラッシュ表示時間 */
+    private static final int DELAY_TIME = 2000;
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected void onCreate(final Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_splash);
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_splash);
 
-		final Handler handler = new Handler();
-		handler.postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				// ファイルキャッシュ削除
-				FileUtil.deleteAll(ImageUtil.getCacheDir(getApplicationContext()));
-				final Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-				startActivity(intent);
-				finish();
-			}
-		}, DELAY_TIME);
-	}
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // ファイルキャッシュ削除
+                FileUtil.deleteAll(ImageUtil.getCacheDir(getApplicationContext()));
+                final Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }, DELAY_TIME);
+    }
 }
