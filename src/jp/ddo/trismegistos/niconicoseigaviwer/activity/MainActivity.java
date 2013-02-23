@@ -44,8 +44,25 @@ public class MainActivity extends SherlockFragmentActivity {
         actionBar.setIcon(R.drawable.side_menu);
         actionBar.setHomeButtonEnabled(true);
 
+        String category = null;
+        String time = null;
+        if (savedInstanceState != null) {
+            category = savedInstanceState.getString(RankingFragment.ARGS_CATEGORY);
+            time = savedInstanceState.getString(RankingFragment.ARGS_TIME);
+        } else {
+            category = getString(R.string.category_all);
+            time = getString(R.string.time_new);
+        }
         // 初期表示時は総合ランキング
-        dispRanking(getString(R.string.category_all), getString(R.string.time_new));
+        dispRanking(category, time);
+    }
+
+    public void onSaveInstanceState(final Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        RankingFragment f = (RankingFragment) getSupportFragmentManager().findFragmentById(
+                R.id.container);
+        savedInstanceState.putString(RankingFragment.ARGS_CATEGORY, f.getCategory());
+        savedInstanceState.putString(RankingFragment.ARGS_TIME, f.getTime());
     }
 
     /**
@@ -67,7 +84,7 @@ public class MainActivity extends SherlockFragmentActivity {
      */
     private void dispRanking(final String category, final String time) {
         final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        Fragment f = new RankingFragment();
+        final Fragment f = new RankingFragment();
         final Bundle args = new Bundle();
         args.putString(RankingFragment.ARGS_CATEGORY, category);
         args.putString(RankingFragment.ARGS_TIME, time);

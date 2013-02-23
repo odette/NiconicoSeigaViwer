@@ -94,8 +94,8 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
     @Override
     public void onActivityCreated(final Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        category = getArguments().getString(ARGS_CATEGORY);
-        time = getArguments().getString(ARGS_TIME);
+        // category = getArguments().getString(ARGS_CATEGORY);
+        // time = getArguments().getString(ARGS_TIME);
         setEmptyText("No Data");
         // 空のアダプターを作成
         adapter = new RankingAdapter(getActivity(), R.layout.ranking_row,
@@ -124,8 +124,10 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
      * {@inheritDoc}
      */
     @Override
-    public Loader<List<SeigaInfoDto>> onCreateLoader(final int id, final Bundle ars) {
-        setTitle();
+    public Loader<List<SeigaInfoDto>> onCreateLoader(final int id, final Bundle args) {
+        category = args.getString(ARGS_CATEGORY);
+        time = args.getString(ARGS_TIME);
+        setTitle(category, time);
         return new RankingLoader(getActivity(), category, time);
     }
 
@@ -152,7 +154,7 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
     public void onLoaderReset(final Loader<List<SeigaInfoDto>> loader) {
     }
 
-    private void setTitle() {
+    private void setTitle(final String category, final String time) {
         Activity activity = getActivity();
         if (activity instanceof SherlockFragmentActivity) {
             ((SherlockFragmentActivity) activity).getSupportActionBar().setTitle(
@@ -179,10 +181,20 @@ public class RankingFragment extends ListFragment implements LoaderCallbacks<Lis
                 @Override
                 public void onClick(View v) {
                     setListShown(false);
-                    RankingFragment.this.time = time;
-                    getLoaderManager().restartLoader(0, null, RankingFragment.this);
+                    final Bundle args = new Bundle();
+                    args.putString(ARGS_CATEGORY, category);
+                    args.putString(ARGS_TIME, time);
+                    getLoaderManager().restartLoader(0, args, RankingFragment.this);
                 }
             });
         }
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getTime() {
+        return time;
     }
 }
