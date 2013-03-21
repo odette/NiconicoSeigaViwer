@@ -9,8 +9,8 @@
 		android:state_focused="true">
 		<shape>
 			<gradient
-				android:startColor="#FFF3F7"
-				android:endColor="#FFB5D0"
+				android:startColor="#C1FFB5"
+				android:endColor="#DEFFB5"
 				android:angle="270"/>
 		</shape>
 	</item>
@@ -21,8 +21,8 @@
 		android:state_focused="false">
 		<shape>
 			<gradient
-				android:startColor="#FFF3F7"
-				android:endColor="#FFB5D0"
+				android:startColor="#C1FFB5"
+				android:endColor="#DEFFB5"
 				android:angle="270"/>
 		</shape>
 	</item>
@@ -33,8 +33,8 @@
 		android:state_focused="true">
 		<shape>
 			<gradient
-				android:startColor="#FFF3F7"
-				android:endColor="#FFB5D0"
+				android:startColor="#C1FFB5"
+				android:endColor="#DEFFB5"
 				android:angle="270"/>
 		</shape>
 	</item>
